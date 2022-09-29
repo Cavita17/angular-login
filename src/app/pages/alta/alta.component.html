@@ -1,0 +1,76 @@
+<div class="container-xx">
+    <h1> Alta de registros</h1>
+    <hr>
+    <div class="row text-right">
+        <div class="col">
+            <button routerLink="/home" class="btn btn-danger">
+          <i class="fa fa-arrow-left"></i> Regresar
+        </button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="row animated fadeIn faster">
+    <div class="col">
+
+
+        <form (ngSubmit)="guardar( f )" #f="ngForm">
+
+            <div class="form-group">
+                <label>Firebase ID</label>
+                <input type="text" class="form-control" placeholder="Firebase ID" [(ngModel)]="alta.id" name="id" disabled required>
+                <small class="form-text text-muted">Este Campo es Autogenerado</small>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="alta.nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label>Area</label>
+                <input type="text" class="form-control" placeholder="Area" [(ngModel)]="alta.area" name="area" required>
+            </div>
+            <div class="form-group">
+                <label>Extensiòn</label>
+                <input type="text" class="form-control" placeholder="Extensiòn" [(ngModel)]="alta.extension" name="extension" required>
+            </div>
+            <div class="form-group">
+                <label>Inmueble</label>
+                <input type="text" class="form-control" placeholder="Inmueble" [(ngModel)]="alta.inmueble" name="inmueble" required>
+            </div>
+            <div class="form-group">
+                <label>Direccion</label>
+                <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="alta.direcion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label>Puesto</label>
+                <input type="text" class="form-control" placeholder="Puesto" [(ngModel)]="alta.puesto" name="puesto" required>
+            </div>
+            <div class="form-group">
+                <label>Correo</label>
+                <input type="text" class="form-control" placeholder="Correo" [(ngModel)]="alta.correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label>Identificador</label>
+                <input type="text" class="form-control" placeholder="Identificador" [(ngModel)]="alta.identificador" name="Identificador" required>
+            </div>
+
+
+            <hr>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary w-20">
+                <i class="fa fa-save"></i>
+                Guardar
+              </button>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+</div>
