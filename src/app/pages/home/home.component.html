@@ -10,7 +10,7 @@
 </div>
 
 
-<div class="conteiner mt-5">
+<!-- <div class="conteiner mt-5">
     <ul class="nav justify-content-end">
         <li class="nav-item">
 
@@ -24,7 +24,7 @@
         Cerra Sesion</button>
         </li>
     </ul>
-</div>
+</div> -->
 
 
 
@@ -69,7 +69,7 @@
     </tbody>
 </table>
 
-<div class="alert alert-warning text-center mt-3">
+<div class="alert alert-warning text-center mt-3" *ngIf="isRegistrosEmpty">
     <h4 class="alert-heading">No hay Registros</h4>
     <p>
         <i class="fa fa-exclamation fa-2x"></i>
@@ -78,7 +78,7 @@
 </div>
 
 
-<div class="alert alert-info text-center mt-3">
+<div class="alert alert-info text-center mt-3" *ngIf="isLoading">
     <h4 class="alert-heading">Cargando</h4>
     <p>
         <i class="fa fa-sync-alt fa-spin fa-2x"></i>

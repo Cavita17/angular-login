@@ -12,14 +12,23 @@ import { AltaModel } from '../../models/alta.modelo';
 export class HomeComponent implements OnInit {
 
   registros: AltaModel[] = [];
+  isLoading: boolean = false;
+  isRegistrosEmpty: boolean = false;
 
   constructor(private auth: AuthService,
               private router: Router,
               private altaService : AltasService) { }
 
   ngOnInit() {
+    this.isLoading = true;
     this.altaService.getRegistros()
-    .subscribe(resp=> this.registros = resp);
+    .subscribe(resp=> {
+      this.isLoading = false;
+      this.registros = resp
+      if(!this.registros.length) {
+        this.isRegistrosEmpty = true;
+      }
+    });
   }
   salir() {
       this.auth.logout();
